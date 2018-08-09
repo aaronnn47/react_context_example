@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.app-component {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #888; }
+  .app-component header {
+    background: #222;
+    color: #eee;
+    padding: 1rem; }
+    .app-component header .header-content {
+      max-width: 600px;
+      margin: 0 auto; }
+  .app-component nav {
+    background: #888; }
+    .app-component nav .nav-content-wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start; }
+      .app-component nav .nav-content-wrapper a {
+        color: currentColor;
+        text-decoration: none;
+        margin-right: 2rem; }
+      .app-component nav .nav-content-wrapper span {
+        cursor: pointer;
+        margin-right: 2rem;
+        user-select: none; }
+
+.content-wrapper {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  flex: auto;
+  text-align: left;
+  padding: 1rem 0;
+  background: #222;
+  color: #eee; }
