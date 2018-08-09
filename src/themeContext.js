@@ -8,6 +8,10 @@ export const themes = {
     dark: {
         background: '#222',
         color: '#eee'
+    },
+    groovy: {
+        background: '#BADA55',
+        color: '#00aacc'
     }
 }
 

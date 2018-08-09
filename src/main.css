@@ -33,9 +33,7 @@
         user-select: none; }
 
 .content-wrapper {
-  max-width: 600px;
   width: 100%;
-  margin: 0 auto;
   flex: auto;
   text-align: left;
   padding: 1rem 0;
@@ -44,3 +42,7 @@
 
 hr {
   margin: .5rem 0; }
+
+.contain {
+  max-width: 600px;
+  margin: 0 auto; }

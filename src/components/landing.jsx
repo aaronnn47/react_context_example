@@ -8,6 +8,7 @@ export default props => (
           background: context.theme.background,
           color: context.theme.color
       }}>
+      <div className="contain">
         <h3>Home</h3>
         <hr />
         <p>
@@ -15,6 +16,7 @@ export default props => (
           asperiores praesentium, obcaecati libero assumenda sed facilis quo voluptatum dolor sequi quidem aliquam?
           Esse, obcaecati!
         </p>
+        </div>
       </div>
     )}
   </ThemeContext.Consumer>

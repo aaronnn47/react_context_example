@@ -7,20 +7,19 @@ import { themes, ThemeContext } from "./themeContext";
 export default class App extends Component {
   constructor(props) {
     super(props);
-
-    this.toggleTheme = () => {
-      this.setState(state => ({
-        theme: state.theme === themes.light ? themes.dark : themes.light
-      }));
+    this.selectTheme = evt => {
+      this.setState({
+        theme: themes[evt.target.value]
+      });
     };
-
     this.state = {
       theme: themes.light,
-      toggleTheme: this.toggleTheme
+      selectTheme: this.selectTheme
     };
   }
 
   render() {
+    console.log("__app_state:", this.state);
     return (
       <HashRouter>
         <ThemeContext.Provider value={this.state}>
@@ -52,7 +51,12 @@ function Nav(props) {
           <div className="nav-content-wrapper">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <span onClick={context.toggleTheme}>Toggle Theme</span>
+            <label for="theme-selector">Select Theme</label>
+            <select id="theme-selector" onChange={context.selectTheme}>
+              <option value="light">light</option>
+              <option value="dark">dark</option>
+              <option value="groovy">groovy</option>
+            </select>
           </div>
         </nav>
       )}
