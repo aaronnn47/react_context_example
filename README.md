@@ -4,7 +4,7 @@
 
 ## Creating a context file
 
-Create a context file in `src`, we can call this `themeContext.js`, as it will provide styles objects for different user-selectable themes. The default export will be the context object, which we create with `React.createContext()`. In this case we also have another export, which is an object with the styling information for the different themes. 
+Create a context file in `src`, we can call this `themeContext.js`, as it will provide styles objects for different user-selectable themes. One export will be the context object, which we create with `React.createContext()`. In this case we also have another export, which is an object with the styling information for the different themes. 
 <details><summary> themeContext.js </summary>
 
 ```js
