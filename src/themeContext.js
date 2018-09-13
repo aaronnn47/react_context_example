@@ -9,13 +9,16 @@ export const themes = {
         background: '#222',
         color: '#eee'
     },
-    groovy: {
-        background: '#BADA55',
-        color: '#00aacc'
+    sky: {
+        background: 'cornflowerblue',
+        color: '#222'
     }
 }
 
 export const ThemeContext = React.createContext({
     theme: themes.light,
-    toggleTheme: () => {}
+    selectTheme: () => {},
+    data: {
+        apiKey: 'asdf1234'
+    }
 })

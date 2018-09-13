@@ -3,6 +3,7 @@ import { HashRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 import routes from "./routes";
 import { themes, ThemeContext } from "./themeContext";
+import { APIContext } from './apiContext';
 
 export default class App extends Component {
   constructor(props) {
@@ -14,15 +15,23 @@ export default class App extends Component {
     };
     this.state = {
       theme: themes.light,
-      selectTheme: this.selectTheme
+      selectTheme: this.selectTheme,
+      imageURL: 'https://laracasts.com/images/series/circles/do-you-react.png',
+      apiKey: 'asdf1234'
     };
   }
 
   render() {
-    console.log("__app_state:", this.state);
     return (
       <HashRouter>
-        <ThemeContext.Provider value={this.state}>
+        <APIContext.Provider value={{
+          imageURL: this.state.imageURL,
+          apiKey: this.state.apiKey
+          }}>
+        <ThemeContext.Provider value={{
+          theme: this.state.theme,
+          selectTheme: this.state.selectTheme
+        }}>
           <div className="app-component">
             <header
               style={{
@@ -38,6 +47,7 @@ export default class App extends Component {
             {routes}
           </div>
         </ThemeContext.Provider>
+        </APIContext.Provider>
       </HashRouter>
     );
   }
@@ -51,11 +61,11 @@ function Nav(props) {
           <div className="nav-content-wrapper">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <label for="theme-selector">Select Theme</label>
+            <label htmlFor="theme-selector">Select Theme</label>
             <select id="theme-selector" onChange={context.selectTheme}>
               <option value="light">light</option>
               <option value="dark">dark</option>
-              <option value="groovy">groovy</option>
+              <option value="sky">sky</option>
             </select>
           </div>
         </nav>
