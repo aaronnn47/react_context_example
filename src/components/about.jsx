@@ -3,9 +3,6 @@ import { ThemeContext } from "../themeContext";
 import { APIContext } from "../apiContext";
 
 class About extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   componentDidMount() {
     console.log(`
       Have apiKey from APIContext: ${this.props.apiKey}
