@@ -33,7 +33,7 @@ Create a context file in `src`, we can call this `themeContext.js`, as it will p
         }
     })
     ```
-    </details>
+</details>
 
 ## Applying context to our application
 
@@ -43,7 +43,7 @@ Now we will import `themes` and `ThemeContext` into `App.js`.
     ```js
     import { themes, ThemeContext } from "./themeContext";
     ```
-    </details>
+</details>
 
 In order to pass the context data down into our components, we can use the Context Provider higher order component. This takes one attribute, `value`, which will be accessible to any components rendered within the provider.
     <details><summary> App.js </summary>
@@ -74,7 +74,7 @@ In order to pass the context data down into our components, we can use the Conte
         )
     }
     ```
-    </details>
+</details>
 
 ## Accessing context from a component
 
@@ -98,7 +98,7 @@ In order to access the context value, we can use the Context Consumer higher ord
         </ThemeContext.Consumer>
     )
     ```
-    </details>
+</details>
 
 ## Accessing context outside of JSX
 
@@ -134,4 +134,4 @@ Let's use another context object, `APIContext`, which contains an API key value.
         </APIContext.Consumer>
     )
     ```
-    </details>
+</details>
