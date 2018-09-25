@@ -17,8 +17,5 @@ export const themes = {
 
 export const ThemeContext = React.createContext({
     theme: themes.light,
-    selectTheme: () => {},
-    data: {
-        apiKey: 'asdf1234'
-    }
+    selectTheme: () => {}
 })
